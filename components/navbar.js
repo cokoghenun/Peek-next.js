@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import LabelLinks from './labellinks';
 
 const NavBar = () => {
   return (
     <nav>
+      <LabelLinks />
       <Link href='/'>
         <a>Note</a>
       </Link>

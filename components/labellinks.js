@@ -1,8 +1,8 @@
 import Link from 'next/link';
 const PostLink = props => (
   <>
-    <Link href={`/label?title=${props.title}`}>
-      <a>{props.title}</a>
+    <Link href="/label/[id]" as={`/label/${props.id}`}>
+      <a>#{props.id}</a>
     </Link>
     {' | '}
   </>
@@ -10,9 +10,9 @@ const PostLink = props => (
 const LabelLinks = () => {
   return (
     <>
-      <PostLink title='Dev stuff'/>
-      <PostLink title='Jw' />
-      <PostLink title='School stuff' />
+      <PostLink id='Dev-stuff'/>
+      <PostLink id='Jw' />
+      <PostLink id='School stuff' />
     </>
   );
 };

@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import LabelLinks from './labellinks';
+import LabelLinks from './LabelLinks';
 
-const NavBar = () => {
+const NavBar = ({labels}) => {
   return (
     <nav>
-      <LabelLinks />
+      <LabelLinks labels={labels}/>
       <Link href='/'>
         <a>Note</a>
       </Link>

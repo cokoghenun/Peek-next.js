@@ -1,19 +1,21 @@
 import Link from 'next/link';
+
 const PostLink = props => (
   <>
-    <Link href="/label/[id]" as={`/label/${props.id}`}>
+    <Link href='/label/[id]' as={`/label/${props.id}`}>
       <a>#{props.id}</a>
     </Link>
     {' | '}
   </>
 );
-const LabelLinks = () => {
+const LabelLinks = ({ labels }) => {
   return (
     <>
-      <PostLink id='Dev-stuff'/>
-      <PostLink id='Jw' />
-      <PostLink id='School stuff' />
+      {labels.map((l,m) => (
+        <PostLink id={l} key={m} />
+      ))}
     </>
   );
 };
+
 export default LabelLinks;

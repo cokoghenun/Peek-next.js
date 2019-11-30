@@ -1,5 +1,4 @@
 import Layout from '../components/Layout';
-import fetch from 'isomorphic-unfetch';
 import DataProvider from '../public/js/dataprovider';
 
 const Index = ({ label }) => {
